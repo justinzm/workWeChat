@@ -201,7 +201,7 @@ class WorkWeChat(object):
             获取成员
             参数	必须	说明
             access_token	是	调用接口凭证
-            userid	是	员工UserID。对应管理端的帐号
+            userid          是	员工UserID。对应管理端的帐号
         """
         url = "%s/user/get?access_token=%s&userid=%s" % (self.url_prefix, self.access_token, userid)
         status, res = self.__get(url)
@@ -463,7 +463,7 @@ class WorkWeChat(object):
             二次验证
             参数	必须	说明
             access_token	是	调用接口凭证
-            userid	是	员工UserID
+            userid          是	员工UserID
         """
         url = "https://qyapi.weixin.qq.com/cgi-bin/user/authsucc?access_token=%s&userid=%s" \
               % (self.access_token, userid)
